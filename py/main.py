@@ -17,7 +17,6 @@ from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import nltk
 
 
-
 st.set_page_config(layout="wide")
 # App title
 st.markdown(
@@ -40,7 +39,7 @@ div.stButton > button:first-child {
     unsafe_allow_html=True,
 )
 
-link = "http://127.0.0.1:5500/index.html"
+link = "http://localhost:3000/index.html#"
 
 if st.sidebar.button("Home"):
     webbrowser.open(link, new=0)
@@ -224,7 +223,7 @@ if st.checkbox("Sentiment Analysis - NLP on Twitter: (Observing General Opinion)
 
     with st.spinner(f"Getting tweets about {tickerName} take awhile..."):
         st.subheader(f"200 Most Recent Tweets Regarding {tickerName}")
-        do, his = st.beta_columns(2)
+        do, his = st.columns(2)
         # Graphs the donut chart and histogram of the sentiment values
         create_sentiment(tweeterid)
 
