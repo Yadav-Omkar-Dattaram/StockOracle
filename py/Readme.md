@@ -7,7 +7,9 @@ will the future stock value for that particular company.
 2. Install [`Conda`]
 https://docs.conda.io/projects/conda/en/latest/user-guide/install/windows.html for creating Conda Environments.
     ```bash
-    pip install conda
+    pip install conda #depreceted
+
+    Download miniconda from chrome open miniconda command line after installation.
     ```
 
 3. Create Conda environment called using `conda`.
@@ -24,6 +26,7 @@ https://docs.conda.io/projects/conda/en/latest/user-guide/install/windows.html f
     You can use the `deactivate` command for deactivating the virtual environment.
 4. Install the required Python packages by the command:
     ```bash
+    do it inside conda environment
     pip install -r requirements.txt
 
     ```********Perfrom the solution part before installing through requirements.txt*********
