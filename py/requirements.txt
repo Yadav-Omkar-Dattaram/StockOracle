@@ -1,0 +1,9 @@
+streamlit
+pandas
+numpy
+cufflinks
+yfinance
+nltk
+asyncio
+twint
+matplotlib
