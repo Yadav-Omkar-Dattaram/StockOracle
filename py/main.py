@@ -39,7 +39,7 @@ div.stButton > button:first-child {
 )
 
 link = "http://localhost:3000/index.html#"
-
+url = "https://github.com/Yadav-Omkar-Dattaram/StockOracle/blob/master/py/Indian-Ticker.txt"
 if st.sidebar.button("Home"):
     webbrowser.open(link, new=0)
 
@@ -48,7 +48,7 @@ start_date = st.sidebar.date_input("Start date", datetime.date(2019, 1, 1))
 end_date = st.sidebar.date_input("End date", datetime.date(2021, 1, 31))
 
 # Retrieving tickers data
-ticker_list = pd.read_csv("Indian-Ticker.txt", sep=",", header=None)
+ticker_list = pd.read_csv(url, sep=",", header=None)
 
 tickerOpt = st.sidebar.selectbox(
     "Stock ticker", ticker_list[1])  # Select ticker symbol
