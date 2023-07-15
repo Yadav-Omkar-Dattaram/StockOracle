@@ -48,10 +48,10 @@ start_date = st.sidebar.date_input("Start date", datetime.date(2019, 1, 1))
 end_date = st.sidebar.date_input("End date", datetime.date(2021, 1, 31))
 
 # Retrieving tickers data
-# ticker_list = pd.read_csv(url, sep=",", header=None)
-uploaded_file = st.file_uploader("Choose a file")
+ticker_list = pd.read_csv("https://raw.githubusercontent.com/Yadav-Omkar-Dattaram/StockOracle/main/py/Indian-Ticker.txt", sep=",", header=None)
+# uploaded_file = st.file_uploader("Choose a file")
 
-ticker_list = pd.read_csv(uploaded_file, sep=",", header=None)
+# ticker_list = pd.read_csv(uploaded_file, sep=",", header=None)
 
 tickerOpt = st.sidebar.selectbox(
     "Stock ticker", ticker_list[1])  # Select ticker symbol
