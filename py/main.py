@@ -50,8 +50,8 @@ end_date = st.sidebar.date_input("End date", datetime.date(2021, 1, 31))
 # Retrieving tickers data
 # ticker_list = pd.read_csv(url, sep=",", header=None)
 uploaded_file = st.file_uploader("Choose a file")
-if uploaded_file is not None:
-  df = pd.read_csv(uploaded_file, sep=",", header=None)
+
+ticker_list = pd.read_csv(uploaded_file, sep=",", header=None)
 
 tickerOpt = st.sidebar.selectbox(
     "Stock ticker", ticker_list[1])  # Select ticker symbol
